@@ -1,0 +1,21 @@
+//递归算法
+#include<stdio.h>
+int f(int n,int k);
+int main()
+{
+	int n, k,j;
+	printf("请输入两个数n,k:\n");
+	scanf("%d,%d",&n,&k);
+	printf("%d\n",f(n,k));
+	return 0;
+}
+
+int f(int n,int k)
+{
+	if(n==0)
+		return 0;
+	if(n==1||k==0)
+		return 1;
+	else
+		return (n*f(n,k-1));
+}
